@@ -3,18 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
@@ -22,7 +16,6 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Style for container div */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -30,7 +23,6 @@ body {
   overflow: hidden;
 }
 
-/* Nav style */
 header {
   background-color: cornflowerblue;
   color: #fff;
@@ -70,48 +62,105 @@ nav {
   background-color: darkcyan;
 }
 
-#invoice {
-  margin-top: 30px;
+.hero-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.productList {
-  /* display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap; */
+.hero-image {
+  width: 1280px;
+  height: 600px;
+  background-image: url("../images/n3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+.shop-now {
+  display: block;
+  margin: 30px auto;
+  font-size: 30px;
+  border: 3px solid black;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+.shop-now:hover {
+  background-color: darkcyan;
+  color: white;
 }
 
 .menu-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
   margin-top: 20px;
 }
 
-/* 404 style*/
-.nf {
-  color: dodgerblue;
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
   text-align: center;
-  margin-top: 30%;
-  margin-bottom: 20%;
 }
 
-.nfp {
-  text-align: center;
-  margin-top: -220px;
-  margin-bottom: 16%;
+.product img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.btn-pdf {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-pdf:hover {
+  background-color: darkcyan;
 }
 
 footer {
-  position: relative;
-  left: 0;
-  bottom: 0;
   width: 100%;
-  color: dodgerblue;
   text-align: center;
-  margin-bottom: 40px;
-}
-footer p {
+  padding: 20px;
   color: dodgerblue;
-  margin-bottom: 40px;
+  background-color: #f8f9fa;
+  margin-top: auto;
 }
